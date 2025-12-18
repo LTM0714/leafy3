@@ -2,7 +2,7 @@ version: '3'
 services:
   leafy-postgres:
     # build: ./leafy-postgresql
-    image: ltm0714/leafy-postgres:7b3d07f032fb00855bf87b4e5a82325ac0e9e04b
+    image: ltm0714/leafy-postgres:2a43f5b183f35e130a5a88420f3123b4cbf2d9a5
     # image: leafy-postgres:5.0.0-compose
     volumes:
       - mydata:/var/lib/postgresql/data
