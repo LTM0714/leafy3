@@ -29,7 +29,7 @@ services:
       
   leafy-frontend:
     # build: ./leafy-frontend
-    image: ltm0714/leafy-frontend:04440b5954cb450aa55f424946350cd64e10c8ad
+    image: ltm0714/leafy-frontend:207aaf462db85525bf71df2b9f779caf48245a84
     # image: leafy-frontend:5.0.0-compose
     environment:
       - BACKEND_HOST=leafy-backend
