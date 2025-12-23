@@ -2,7 +2,9 @@ version: '3'
 services:
   leafy-postgres:
     # build: ./leafy-postgresql
-    image: ltm0714/leafy-postgres:2a43f5b183f35e130a5a88420f3123b4cbf2d9a5
+    image: ltm0714/leafy-postgres:4b5bb601c11aedf70eb58a68f293728ff8f9b3a9
+    security_opt:
+      - seccomp:unconfined
     # image: leafy-postgres:5.0.0-compose
     volumes:
       - mydata:/var/lib/postgresql/data
@@ -30,6 +32,8 @@ services:
   leafy-frontend:
     # build: ./leafy-frontend
     image: ltm0714/leafy-frontend:207aaf462db85525bf71df2b9f779caf48245a84
+    security_opt:
+      - seccomp:unconfined
     # image: leafy-frontend:5.0.0-compose
     environment:
       - BACKEND_HOST=leafy-backend
